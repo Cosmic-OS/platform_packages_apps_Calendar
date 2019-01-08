@@ -54,10 +54,11 @@
 
         <activity
             android:name="AllInOneActivity"
-            android:theme="@style/CalendarTheme.WithActionBar"
+            android:configChanges="orientation"
+            android:exported="true"
             android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustPan"
-            android:exported="true">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -80,7 +81,9 @@
 
         <activity
             android:name="EventInfoActivity"
-            android:parentActivityName="com.android.calendar.AllInOneActivity">
+            android:configChanges="orientation"
+            android:parentActivityName="com.android.calendar.AllInOneActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -96,9 +99,12 @@
 
         <activity android:name=".event.EditEventActivity" />
 
-        <activity-alias android:name="EditEventActivity"
-            android:targetActivity=".event.EditEventActivity"
-            android:exported="true">
+        <activity-alias
+            android:name="EditEventActivity"
+            android:configChanges="orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:targetActivity=".event.EditEventActivity">
             <intent-filter>
                 <action android:name="android.intent.action.EDIT" />
                 <action android:name="android.intent.action.INSERT" />
@@ -131,15 +137,21 @@
 
         <activity
             android:name=".selectcalendars.SelectVisibleCalendarsActivity"
-            android:label="@string/select_visible_calendars_title" />
+            android:configChanges="orientation"
+            android:label="@string/select_visible_calendars_title"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".selectcalendars.SelectSyncedCalendarsMultiAccountActivity"
-            android:label="@string/select_synced_calendars_title" />
+            android:configChanges="orientation"
+            android:label="@string/select_synced_calendars_title"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name="CalendarSettingsActivity"
-            android:label="@string/preferences_title" />
+            android:configChanges="orientation"
+            android:label="@string/preferences_title"
+            android:screenOrientation="portrait" />
 
         <!-- Declarations for search -->
         <!-- Make all activities a searchable context -->
