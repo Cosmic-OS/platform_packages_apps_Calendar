@@ -46,7 +46,7 @@
             android:hardwareAccelerated="true"
             android:backupAgent="com.android.calendar.CalendarBackupAgent"
             android:requiredAccountType="*"
-            android:theme="@style/CalendarTheme.WithActionBar"
+            android:theme="@style/CalendarTheme.WithNoActionBar"
             android:usesCleartextTraffic="false" >
 
         <meta-data android:name="com.google.android.backup.api_key"
@@ -83,7 +83,8 @@
             android:name="EventInfoActivity"
             android:configChanges="orientation"
             android:parentActivityName="com.android.calendar.AllInOneActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/CalendarTheme.WithActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -97,7 +98,9 @@
                 android:value="com.android.calendar.AllInOneActivity" />
         </activity>
 
-        <activity android:name=".event.EditEventActivity" />
+        <activity
+            android:name=".event.EditEventActivity"
+            android:theme="@style/CalendarTheme.WithActionBar" />
 
         <activity-alias
             android:name="EditEventActivity"
@@ -139,7 +142,8 @@
             android:name=".selectcalendars.SelectVisibleCalendarsActivity"
             android:configChanges="orientation"
             android:label="@string/select_visible_calendars_title"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/CalendarTheme.WithActionBar" />
 
         <activity
             android:name=".selectcalendars.SelectSyncedCalendarsMultiAccountActivity"
@@ -151,8 +155,8 @@
             android:name="CalendarSettingsActivity"
             android:configChanges="orientation"
             android:label="@string/preferences_title"
-            android:theme="@style/CalendarTheme.Settings"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/CalendarTheme.Settings" />
 
         <!-- Declarations for search -->
         <!-- Make all activities a searchable context -->
