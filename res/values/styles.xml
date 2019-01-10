@@ -173,6 +173,11 @@
         <item name="actionBarSize">90dp</item>
     </style>
 
+    <style name="CalendarTheme.Settings" parent="CalendarTheme.WithActionBar">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowActionBar">true</item>
+    </style>
+
     <style name="MultiStateButton">
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
